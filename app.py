@@ -71,11 +71,11 @@ if click:
         mime="image/png"
         )
 
-
-     else:
-         st.error("Please Fill the boxes")
+    else:
+        st.error("Please Fill the boxes")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
