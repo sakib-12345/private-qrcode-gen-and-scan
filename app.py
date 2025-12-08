@@ -74,9 +74,10 @@ if click:
             st.error("Please Fill the boxes")
 
     else:
-        st.error("The phonne number is invalid(must be 11-digit integer)")
+        st.error("The phone number is invalid")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
