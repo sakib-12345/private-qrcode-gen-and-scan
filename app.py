@@ -21,7 +21,6 @@ def num_check(number):
     if int(number) > 9999999999 and int(number) < 100000000000:
         return True
     else:
-        st.markdown("<span style='color: red;'> The phonne number is invalid</span>", unsafe_allow_html=True)
         return False
 
 name = st.text_input("Name")
@@ -41,40 +40,45 @@ if click:
     except Exception:
         st.error("The phone number must be numbers.")
         valid_num = False
-    if name and email and phone and valid_num:
-        json_data = json.dumps(data)
+    if valid_num:    
+        if name and email and phone:
+            json_data = json.dumps(data)
 
-        encrypted = fernet.encrypt(json_data.encode()).decode()
+            encrypted = fernet.encrypt(json_data.encode()).decode()
 
     # ✅ Bigger QR → scans easily
-        qr = qrcode.QRCode(
+            qr = qrcode.QRCode(
             version=4,
             box_size=12,
             border=4
-         )
+             )
 
-        qr.add_data(encrypted)
-        qr.make(fit=True)
+            qr.add_data(encrypted)
+            qr.make(fit=True)
 
-        img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+            img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
 
-        buffer = BytesIO()
-        img.save(buffer, format="PNG")
-        img_bytes = buffer.getvalue()
+            buffer = BytesIO()
+            img.save(buffer, format="PNG")
+            img_bytes = buffer.getvalue()
 
-        st.image(img_bytes, caption="Encrypted QR")
+            st.image(img_bytes, caption="Encrypted QR")
 
-        st.download_button(
-        "Download QR",
-        data=img_bytes,
-        file_name="encrypted_qr.png",
-        mime="image/png"
-        )
+            st.download_button(
+            "Download QR",
+            data=img_bytes,
+            file_name="encrypted_qr.png",
+            mime="image/png"
+            )
+
+        else:
+            st.error("Please Fill the boxes")
 
     else:
-        st.error("Please Fill the boxes")
+        st.markdown("<span style='color: red;'> The phonne number is invalid</span>", unsafe_allow_html=True)
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
