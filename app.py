@@ -71,16 +71,17 @@ if click:
             )
 
         else:
-            st.error("Please Fill the boxes")
+            st.error("Please Fill Name and Email")
 
     else:
-        st.error("The phone number is invalid")
+        st.error("The phone number is invalid or empty")
         st.markdown("""
         - The number must be **11-digit** and **Integer**.
         - It must be starts with **"01"** like **01XXXXXXXXX**
         """)
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
