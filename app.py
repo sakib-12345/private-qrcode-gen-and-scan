@@ -18,7 +18,7 @@ SECRET_KEY = b"w4YNwA3G4gNfCw9xg7tF2z6s2mCzS0TD2Ztq4KSL8gQ="
 fernet = Fernet(SECRET_KEY)
 
 def num_check(number):
-    if number > 9999999999 and number < 100000000000:
+    if int(number) > 9999999999 and int(number) < 100000000000:
         return True
     else:
         st.markdown("<span style='color: red;'>* The phonne number is invalid</span>", unsafe_allow_html=True)
@@ -27,8 +27,10 @@ def num_check(number):
 name = st.text_input("Name")
 email = st.text_input("Email")
 phone = st.text_input("Phone Number")
-valid_num = num_check(phone)
-
+try:
+    valid_num = num_check(phone)
+except Exception:
+    st.warning("The phone number must be numbers.")
 data = {
     "name": name,
     "email": email,
@@ -71,6 +73,7 @@ if click:
         st.warning("Please Fill the boxes")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
