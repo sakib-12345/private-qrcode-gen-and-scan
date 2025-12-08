@@ -92,6 +92,8 @@ if st.button("Decrypt QR"):
                 st.markdown("> Phone:")
                 st.markdown(f"<span style='color: orange;'>{obj['phone']}</span>", unsafe_allow_html=True)
 
+                st.markdown("> Message")
+                st.markdown(f"<span style='color: green;'>{obj['msg']}</span>", unsafe_allow_html=True)
         except Exception as e:
             st.error(f"Decrypt failed: {e}")
 
