@@ -28,7 +28,7 @@ email = st.text_input("Email")
 phone = st.text_input("Phone Number")
 text = st.text_area(
     "Message (Optional):",
-    height=300,  # Set the height in pixels
+    height=150,  # Set the height in pixels
     placeholder="Start typing...",
     label_visibility="visible"
 )
@@ -38,6 +38,7 @@ data = {
     "name": name,
     "email": email,
     "phone": phone,
+    "msg": text
 }
 
 if click:
@@ -87,6 +88,7 @@ if click:
         """)
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
