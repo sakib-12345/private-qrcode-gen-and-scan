@@ -17,9 +17,17 @@ st.markdown("##### Made by Shakib Hossain Tahmid")
 SECRET_KEY = b"w4YNwA3G4gNfCw9xg7tF2z6s2mCzS0TD2Ztq4KSL8gQ="
 fernet = Fernet(SECRET_KEY)
 
+def num_check(number):
+    if number > 9999999999 and number < 100000000000:
+        return True
+    else:
+        st.markdown("<span style='color: red;'>* The phonne number is invalid</span>", unsafe_allow_html=True)
+        return False
+
 name = st.text_input("Name")
 email = st.text_input("Email")
-phone = st.text_input("Phone")
+phone = st.text_input("Phone Number")
+valid_num = num_check(phone)
 
 data = {
     "name": name,
@@ -28,7 +36,7 @@ data = {
 }
 click = st.button("Generate Encrypted QR")
 if click:
-    if name and email and phone:
+    if name and email and phone and valid_num:
         json_data = json.dumps(data)
 
         encrypted = fernet.encrypt(json_data.encode()).decode()
@@ -63,6 +71,7 @@ if click:
         st.warning("Please Fill the boxes")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
