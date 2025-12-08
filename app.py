@@ -27,7 +27,7 @@ data = {
     "phone": phone,
 }
 
-if st.button("Generate Encrypted QR"):
+if st.button("Generate Encrypted QR") and name and email and phone:
 
     json_data = json.dumps(data)
 
@@ -59,3 +59,6 @@ if st.button("Generate Encrypted QR"):
     )
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
+else:
+    st.warning("Please fill the upper values")
