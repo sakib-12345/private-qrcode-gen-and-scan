@@ -38,7 +38,6 @@ if click:
     try:
         valid_num = num_check(phone)
     except Exception:
-        st.error("The phone number must be numbers.")
         valid_num = False
     if valid_num:    
         if name and email and phone:
@@ -75,9 +74,10 @@ if click:
             st.error("Please Fill the boxes")
 
     else:
-        st.error("The phonne number is invalid")
+        st.error("The phonne number is invalid(must be 11-digit integer)")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
