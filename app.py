@@ -29,7 +29,7 @@ phone = st.text_input("Phone Number")
 text = st.text_area(
     "Message (Optional):",
     height=150,  # Set the height in pixels
-    placeholder="Start typing...",
+    placeholder="complex text won't work.....",
     label_visibility="visible"
 )
 if text:
@@ -90,6 +90,7 @@ if click:
         """)
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
