@@ -26,6 +26,12 @@ def num_check(number):
 name = st.text_input("Name")
 email = st.text_input("Email")
 phone = st.text_input("Phone Number")
+text = st.text_area(
+    "Message (Optional):",
+    height=300,  # Set the height in pixels
+    placeholder="Start typing...",
+    label_visibility="visible"
+)
 click = st.button("Generate Encrypted QR")
 
 data = {
@@ -81,6 +87,7 @@ if click:
         """)
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
