@@ -32,6 +32,8 @@ text = st.text_area(
     placeholder="Start typing...",
     label_visibility="visible"
 )
+if text:
+    text = text.strip().replace("\n", "").replace(" ", "_")
 click = st.button("Generate Encrypted QR")
 
 data = {
@@ -88,6 +90,7 @@ if click:
         """)
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
