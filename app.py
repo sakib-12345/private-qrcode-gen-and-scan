@@ -18,7 +18,7 @@ SECRET_KEY = b"w4YNwA3G4gNfCw9xg7tF2z6s2mCzS0TD2Ztq4KSL8gQ="
 fernet = Fernet(SECRET_KEY)
 
 def num_check(number):
-    if int(number) > 9999999999 and int(number) < 100000000000:
+    if int(number) > 999999999 and int(number) < 10000000000:
         return True
     else:
         return False
@@ -77,6 +77,7 @@ if click:
         st.error("The phone number is invalid")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
