@@ -27,41 +27,42 @@ data = {
     "phone": phone,
 }
 click = st.button("Generate Encrypted QR")
-if click and name is not None and email is not None and phone is not None:
+if click:
+    if name and email and phone:
+        json_data = json.dumps(data)
 
-    json_data = json.dumps(data)
-
-    encrypted = fernet.encrypt(json_data.encode()).decode()
+        encrypted = fernet.encrypt(json_data.encode()).decode()
 
     # ✅ Bigger QR → scans easily
-    qr = qrcode.QRCode(
-        version=4,
-        box_size=12,
-        border=4
-    )
+        qr = qrcode.QRCode(
+            version=4,
+            box_size=12,
+            border=4
+         )
 
-    qr.add_data(encrypted)
-    qr.make(fit=True)
+        qr.add_data(encrypted)
+        qr.make(fit=True)
 
-    img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+        img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
 
-    buffer = BytesIO()
-    img.save(buffer, format="PNG")
-    img_bytes = buffer.getvalue()
+        buffer = BytesIO()
+        img.save(buffer, format="PNG")
+        img_bytes = buffer.getvalue()
 
-    st.image(img_bytes, caption="Encrypted QR")
+        st.image(img_bytes, caption="Encrypted QR")
 
-    st.download_button(
+        st.download_button(
         "Download QR",
         data=img_bytes,
         file_name="encrypted_qr.png",
         mime="image/png"
-    )
+        )
 
 
-else:
-    st.warning("Please Fill the boxes")
+    else:
+        st.warning("Please Fill the boxes")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
