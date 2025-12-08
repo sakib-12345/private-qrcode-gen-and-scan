@@ -21,18 +21,14 @@ def num_check(number):
     if int(number) > 9999999999 and int(number) < 100000000000:
         return True
     else:
-        st.markdown("<span style='color: red;'>* The phonne number is invalid</span>", unsafe_allow_html=True)
+        st.markdown("<span style='color: red;'> The phonne number is invalid</span>", unsafe_allow_html=True)
         return False
 
 name = st.text_input("Name")
 email = st.text_input("Email")
 phone = st.text_input("Phone Number")
 click = st.button("Generate Encrypted QR")
-try:
-    valid_num = num_check(phone)
-except Exception:
-    st.error("The phone number must be numbers.")
-    valid_num = False
+
 data = {
     "name": name,
     "email": email,
@@ -40,6 +36,11 @@ data = {
 }
 
 if click:
+    try:
+        valid_num = num_check(phone)
+    except Exception:
+        st.error("The phone number must be numbers.")
+        valid_num = False
     if name and email and phone and valid_num:
         json_data = json.dumps(data)
 
@@ -71,10 +72,11 @@ if click:
         )
 
 
-    else:
-        st.error("Please Fill the boxes")
+     else:
+         st.error("Please Fill the boxes")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
