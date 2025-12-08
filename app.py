@@ -75,9 +75,10 @@ if click:
             st.error("Please Fill the boxes")
 
     else:
-        st.markdown("<span style='color: red;'> The phonne number is invalid</span>", unsafe_allow_html=True)
+        st.error("The phonne number is invalid")
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+
 
 
 
