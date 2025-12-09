@@ -96,11 +96,11 @@ with st.sidebar:
     side_note()
     social_links()
 
- st.markdown(
-            f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
+ st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
             unsafe_allow_html=True
 
            ) 
+
 
 
 
