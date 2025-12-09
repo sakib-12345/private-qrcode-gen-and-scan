@@ -35,7 +35,7 @@ text = st.text_area(
     label_visibility="visible"
 )
 if text:
-    text = text.strip().replace("\n", "").replace(" ", "_")
+    text = text.strip().replace("\n", "$").replace(" ", "_")
 click = st.button("Generate Encrypted QR")
 
 data = {
@@ -97,6 +97,7 @@ st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hos
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
