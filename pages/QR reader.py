@@ -14,7 +14,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.markdown("# <span style='color: purple;'>Encrypted QR Scanner</span>", unsafe_allow_html=True)
+st.markdown("# <span style='color: #c084fc;'>Encrypted QR Scanner</span>", unsafe_allow_html=True)
 st.markdown("##### Made by Shakib Hossain Tahmid")
 
 SECRET_KEY = b"w4YNwA3G4gNfCw9xg7tF2z6s2mCzS0TD2Ztq4KSL8gQ="
@@ -101,7 +101,7 @@ if st.button("Decrypt QR"):
         except Exception as e:
             st.error(f"Decrypt failed: {e}")
 
-st.markdown("> <span style='color: orange;'>Scanner synced with generator ✅</span>", unsafe_allow_html=True)
+st.markdown("> <span style='color: #c084fc;'>Scanner synced with generator ✅</span>", unsafe_allow_html=True)
 st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>', unsafe_allow_html=True) 
 
 with st.sidebar:
