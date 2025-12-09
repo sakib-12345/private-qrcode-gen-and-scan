@@ -83,7 +83,7 @@ if click:
 
        
         else:
-            st.error("The phone number is invalid or empty")
+            st.error("The phone number is invalid.")
             st.markdown("""
             - The number must be **11-digit** and **Integer**.
             - It must be starts with **"01"** like **01XXXXXXXXX**
@@ -96,6 +96,7 @@ st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hos
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
