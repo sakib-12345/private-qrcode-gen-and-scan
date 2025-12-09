@@ -112,12 +112,6 @@ with st.sidebar:
             color: #e9d5ff;
             box-shadow: 0 0 8px rgba(168, 85, 247, 0.15);
         }
-
-        .about-footer {
-            margin-top: 18px;
-            font-size: 12px;
-            color: #a78bfa;
-        }
         </style>
         
         <div class="about-title-dark">About This Page</div>
@@ -128,7 +122,6 @@ with st.sidebar:
             Built for secure generation and scanning without data leaks.
         </div>
 
-        <p class="about-footer">v1.0 • by Sakib</p>
         """,
         unsafe_allow_html=True
     )
@@ -201,6 +194,7 @@ st.markdown(
             unsafe_allow_html=True
 
            ) 
+
 
 
 
