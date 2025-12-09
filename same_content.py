@@ -67,6 +67,7 @@ def social_links():
             font-size: 22px;
             font-weight: bold;
             margin-bottom: 15px;
+            color: #c084fc;
         }
         @keyframes glitch {
             0% { transform: translate(0px, 0px); text-shadow: 2px 2px #0ff, -2px -2px #f0f; }
@@ -114,4 +115,5 @@ def header():
             </style>
             """
     st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
