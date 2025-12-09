@@ -1,1 +1,1 @@
-LIVE LINK:[click here](https://app-qrcode-gen-and-scan.streamlit.app/)
+LIVE LINK:[click here](https://my-qrcode-app-sakib.streamlit.app/)
