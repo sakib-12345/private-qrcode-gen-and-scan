@@ -50,8 +50,8 @@ if click:
         valid_num = num_check(phone)
     except Exception:
         valid_num = False
-    if valid_num:    
-        if name and email and phone:
+    if name and email and phone:    
+        if valid_num:
             json_data = json.dumps(data)
 
             encrypted = fernet.encrypt(json_data.encode()).decode()
@@ -81,22 +81,22 @@ if click:
             mime="image/png"
             )
 
+       
         else:
-            st.error("Please Fill Name and Email")
-
+            st.error("The phone number is invalid or empty")
+            st.markdown("""
+            - The number must be **11-digit** and **Integer**.
+            - It must be starts with **"01"** like **01XXXXXXXXX**
+            """)
     else:
-        st.error("The phone number is invalid or empty")
-        st.markdown("""
-        - The number must be **11-digit** and **Integer**.
-        - It must be starts with **"01"** like **01XXXXXXXXX**
-        """)
-
+        st.error("Please Fill the Boxes")
 st.markdown("> <span style='color: #c084fc;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
 st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>', unsafe_allow_html=True) 
 
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
