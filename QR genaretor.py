@@ -71,9 +71,8 @@ if click:
             buffer = BytesIO()
             img.save(buffer, format="PNG")
             img_bytes = buffer.getvalue()
-            col1, col2, col3 = st.columns([1,2,1])
-            with col2:
-                st.image(img_bytes, caption="Encrypted QR", width=170)
+           
+            st.image(img_bytes, caption="Encrypted QR", width=170)
 
             st.download_button(
             "Download QR",
@@ -97,6 +96,7 @@ st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hos
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
