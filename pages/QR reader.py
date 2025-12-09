@@ -87,15 +87,15 @@ if st.button("Decrypt QR"):
             with st.expander("Decoded Information", expanded=True):
 
                 st.markdown("> Name:")
-                st.markdown(f"<span style='color: orange;'>{obj['name']}</span>", unsafe_allow_html=True)
+                st.markdown(f"<span style='color: #c084fc;'>{obj['name']}</span>", unsafe_allow_html=True)
 
                 st.markdown("> Email:")
-                st.markdown(f"<span style='color: orange;'>{obj['email']}</span>", unsafe_allow_html=True)
+                st.markdown(f"<span style='color: #c084fc;'>{obj['email']}</span>", unsafe_allow_html=True)
 
                 st.markdown("> Phone:")
-                st.markdown(f"<span style='color: orange;'>{obj['phone']}</span>", unsafe_allow_html=True)
+                st.markdown(f"<span style='color: #c084fc;'>{obj['phone']}</span>", unsafe_allow_html=True)
                 t = "Empty" if obj['msg'] == "" else obj['msg'].replace("_", " ")
-                c = "red" if obj['msg'] == "" else "green"
+                c = "pink" if obj['msg'] == "" else "green"
                 st.markdown("> Message")
                 st.markdown(f"<span style='color: {c};'>{t}</span>", unsafe_allow_html=True)
         except Exception as e:
