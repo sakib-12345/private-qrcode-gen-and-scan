@@ -43,6 +43,7 @@ def social_links():
         .social-icons {
             text-align: center;
             margin-top: 40px;
+            color: #c084fc;
         }
 
         .social-icons a {
@@ -115,5 +116,6 @@ def header():
             </style>
             """
     st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 
