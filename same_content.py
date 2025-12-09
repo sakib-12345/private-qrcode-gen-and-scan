@@ -99,7 +99,8 @@ def social_links():
     )
 
     st.markdown(
-            f'<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>',
+            '<div style="text-align: center; color: grey;">v1.0.0</div>',
             unsafe_allow_html=True
 
            ) 
+
