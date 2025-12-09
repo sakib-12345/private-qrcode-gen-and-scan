@@ -91,37 +91,44 @@ if click:
 
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
 
-
-
 with st.sidebar:
     st.markdown(
         """
         <style>
-        .about-box {
-            padding: 12px 15px;
-            background: #f3e8ff;
+        .about-title-dark {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #c084fc;
+        }
+
+        .about-box-dark {
+            padding: 14px 16px;
+            background: #1e1e2e;
             border-left: 4px solid #a855f7;
             border-radius: 10px;
             font-size: 14px;
-            line-height: 1.5;
-            color: #3b0764;
+            line-height: 1.6;
+            color: #e9d5ff;
+            box-shadow: 0 0 8px rgba(168, 85, 247, 0.15);
         }
-        .about-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #6d28d9;
+
+        .about-footer {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #a78bfa;
         }
         </style>
         
-        <div class="about-title">About This Page</div>
-        <div class="about-box">
-            This page works with encrypted QR codes only.<br><br>
-            Other scanners won't work because the data is fully encrypted.<br><br>
-            Use this tool to generate and scan secure QR codes without leaks.
+        <div class="about-title-dark">About This Page</div>
+
+        <div class="about-box-dark">
+            This page handles encrypted QR codes only.<br><br>
+            Other scanners won't work because the QR payload is encrypted.<br><br>
+            Built for secure generation and scanning without data leaks.
         </div>
-        
-        <p style="margin-top:15px; font-size:12px; color:#7c3aed;">v1.0 • by Sakib</p>
+
+        <p class="about-footer">v1.0 • by Sakib</p>
         """,
         unsafe_allow_html=True
     )
@@ -194,6 +201,7 @@ st.markdown(
             unsafe_allow_html=True
 
            ) 
+
 
 
 
