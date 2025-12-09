@@ -43,7 +43,7 @@ def social_links():
         .social-icons {
             text-align: center;
             margin-top: 40px;
-            color: #c084fc;
+            
         }
 
         .social-icons a {
@@ -80,7 +80,7 @@ def social_links():
         }
     </style>
     <div class="social-icons">
-    <div class="contact-heading">Contact Us:</div>
+    <div class="contact-heading" color: #c084fc;>Contact Us:</div>
         <a class='fb' href='https://www.facebook.com/sakibhossain.tahmid' target='_blank'>
             <i class='fab fa-facebook'></i> 
         </a> 
@@ -116,6 +116,7 @@ def header():
             </style>
             """
     st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 
 
