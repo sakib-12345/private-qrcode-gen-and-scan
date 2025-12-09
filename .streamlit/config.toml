@@ -1,6 +1,7 @@
 [theme]
 base="dark"
-primaryColor="#c084fc"
-backgroundColor="#29143d"
-secondaryBackgroundColor="#1a1a1d"
-textColor="#ffffff"
+primaryColor="#c084fc"              # soft neon purple
+backgroundColor="#1b1024"           # deep purple-black
+secondaryBackgroundColor="#24132f"  # smoother panel contrast
+textColor="#f5e8ff"                 # off-white with slight purple tint
+font="sans serif"
