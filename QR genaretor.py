@@ -72,7 +72,7 @@ if click:
             img.save(buffer, format="PNG")
             img_bytes = buffer.getvalue()
 
-            st.image(img_bytes, caption="Encrypted QR")
+            st.image(img_bytes, caption="Encrypted QR", width=120)
 
             st.download_button(
             "Download QR",
@@ -96,6 +96,7 @@ st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hos
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
