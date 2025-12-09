@@ -92,6 +92,42 @@ if click:
 st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
 
 
+
+with st.sidebar:
+    st.markdown(
+        """
+        <style>
+        .about-box {
+            padding: 12px 15px;
+            background: #f3e8ff;
+            border-left: 4px solid #a855f7;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #3b0764;
+        }
+        .about-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #6d28d9;
+        }
+        </style>
+        
+        <div class="about-title">About This Page</div>
+        <div class="about-box">
+            This page works with encrypted QR codes only.<br><br>
+            Other scanners won't work because the data is fully encrypted.<br><br>
+            Use this tool to generate and scan secure QR codes without leaks.
+        </div>
+        
+        <p style="margin-top:15px; font-size:12px; color:#7c3aed;">v1.0 • by Sakib</p>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+
 st.sidebar.markdown(
     """
     <style>
@@ -158,6 +194,7 @@ st.markdown(
             unsafe_allow_html=True
 
            ) 
+
 
 
 
