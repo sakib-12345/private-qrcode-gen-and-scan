@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown("# <span style='color: purple;'>Encrypted QR Generator</span>", unsafe_allow_html=True)
+st.markdown("# <span style='color: #c084fc;'>Encrypted QR Generator</span>", unsafe_allow_html=True)
 st.markdown("##### Made by Shakib Hossain Tahmid")
 
 # Static secret key
@@ -91,12 +91,13 @@ if click:
         - It must be starts with **"01"** like **01XXXXXXXXX**
         """)
 
-st.markdown("> <span style='color: orange;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
+st.markdown("> <span style='color: #c084fc;'>Use the scanner page to decode it.</span>", unsafe_allow_html=True)
 st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hossain Tahmid. All Rights Reserved.</div>', unsafe_allow_html=True) 
 
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
