@@ -10,7 +10,7 @@ header()
 
 st.set_page_config(
     page_title="Encrypted QR Scanner",
-    page_icon="🛡️",
+    page_icon="qr_icon.png",
     layout="wide",
 )
 
