@@ -8,7 +8,7 @@ from same_content import side_note, social_links, header
 header()
 st.set_page_config(
     page_title="Encrypted QR Generator",
-    page_icon="🛡️",
+    page_icon="qr_icon.png",
     layout="wide"
 )
 
@@ -96,6 +96,7 @@ st.markdown('<div style="text-align: center; color: grey;">&copy; 2025 Sakib Hos
 with st.sidebar:
     side_note()
     social_links()
+
 
 
 
